@@ -27,9 +27,9 @@ export const Navbar = ({ name }) => {
                         { name == "about" && <MDBNavItem active><MDBNavLink to="/about">About</MDBNavLink></MDBNavItem>}
                         { name != "about" && <MDBNavItem><MDBNavLink to="/about">About</MDBNavLink></MDBNavItem>}
                     </MDBNavbarNav>
-                    <MDBNavbarNav right>
+                    <MDBNavbarNav right className="nav-flex-icons">
                         <MDBNavItem>
-                            <MDBNavLink to="#"><MDBIcon fab icon="facebook-f" /></MDBNavLink>
+                            <MDBNavLink to="#"><MDBIcon fab icon="facebook-f"/></MDBNavLink>
                         </MDBNavItem>
                         <MDBNavItem>
                             <MDBNavLink to="#"><MDBIcon fab icon="twitter" /></MDBNavLink>
