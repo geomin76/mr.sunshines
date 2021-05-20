@@ -1,11 +1,11 @@
 import { createMuiTheme, CssBaseline, MuiThemeProvider } from "@material-ui/core";
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import { Home } from "./pages/Home";
 import { Store } from "./pages/Store";
 import { About } from "./pages/About";
-import { useState } from "react";
 import { Cart } from "./pages/Cart";
+import { commerce } from './lib/commerce'
 
 const theme = createMuiTheme({
   palette: {
@@ -19,7 +19,19 @@ const theme = createMuiTheme({
 })
 
 export const App = () => {
-  const [products, setProducts] = useState([]);
+  const [ products, setProducts ] = useState([]);
+
+  const fetchProducts = async () => {
+    const { data } = await commerce.products.list();
+    
+    setProducts(data);
+  }
+
+  useEffect(() => {
+    fetchProducts();
+  }, [])
+
+  console.log(products)
 
   return (
     <MuiThemeProvider theme={theme}>
