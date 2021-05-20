@@ -2,10 +2,10 @@ import React from "react"
 import { MDBBox, MDBCol, MDBContainer, MDBRow } from "mdbreact";
 import { Navbar } from "../components/Navbar";
 
-export const About = () => {
+export const About = ({ cart }) => {
     return (
         <MDBContainer>
-            <Navbar name="about"/>
+            <Navbar name="about" cart={cart}/>
             <MDBBox style={{ marginTop: "20px" }}>
                 <h2 className="text-center">About me</h2>
                 <MDBBox style={{ marginTop: "20px" }}>

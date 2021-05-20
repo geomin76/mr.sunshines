@@ -2,10 +2,10 @@ import React from "react"
 import { MDBBox, MDBCol, MDBContainer, MDBJumbotron, MDBRow } from "mdbreact";
 import { Navbar } from "../components/Navbar";
 
-export const Home = () => {
+export const Home = ({ cart }) => {
     return (
         <MDBContainer>
-            <Navbar name="home"/>
+            <Navbar name="home" cart={cart}/>
             <MDBRow>
                 <MDBCol>
                     <MDBJumbotron style={{ background: "none" }}>

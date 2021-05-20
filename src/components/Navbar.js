@@ -2,8 +2,9 @@ import React, { useState } from "react"
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBIcon } from 'mdbreact';
 import { Badge, IconButton } from '@material-ui/core'
 import { ShoppingCart } from '@material-ui/icons'
+import { Cart } from "./Cart";
 
-export const Navbar = ({ name }) => {
+export const Navbar = ({ name, cart }) => {
     
     const [collapse, setCollapse] = useState(false);
 
@@ -45,12 +46,8 @@ export const Navbar = ({ name }) => {
                 </MDBCollapse>
 
                 <MDBNavbarNav right>
-                    <MDBNavLink to="/cart">
-                        <IconButton aria-label="Show cart">
-                            <Badge badgeContent={2} color="secondary">
-                                <ShoppingCart style={{ fill: 'white' }} />
-                            </Badge>
-                        </IconButton>
+                    <MDBNavLink to="/checkout">
+                        <Cart cart={cart}/>
                     </MDBNavLink>
                 </MDBNavbarNav>
             </MDBNavbar>
