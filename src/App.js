@@ -4,6 +4,8 @@ import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import { Home } from "./pages/Home";
 import { Store } from "./pages/Store";
 import { About } from "./pages/About";
+import { useState } from "react";
+import { Cart } from "./pages/Cart";
 
 const theme = createMuiTheme({
   palette: {
@@ -17,6 +19,8 @@ const theme = createMuiTheme({
 })
 
 export const App = () => {
+  const [products, setProducts] = useState([]);
+
   return (
     <MuiThemeProvider theme={theme}>
       <CssBaseline />
@@ -25,10 +29,17 @@ export const App = () => {
           <Route exact path="/" component={Home} />      
         </Switch>
         <Switch>
-          <Route exact path="/store" component={Store} />      
+          <Route exact path="/store">
+            <Store/>
+          </Route>      
         </Switch>
         <Switch>
           <Route exact path="/about" component={About} />      
+        </Switch>
+        <Switch>
+          <Route exact path="/cart">
+            <Cart />
+          </Route>      
         </Switch>
       </Router>
     </MuiThemeProvider>
