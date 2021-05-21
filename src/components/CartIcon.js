@@ -4,7 +4,7 @@ import { ShoppingCart } from '@material-ui/icons'
 import { Navbar } from "./Navbar";
 import React from "react"
 
-export const Cart = ({ cart }) => {
+export const CartIcon = ({ cart }) => {
     return (
         <IconButton aria-label="Show cart">
             { cart &&

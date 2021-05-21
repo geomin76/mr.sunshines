@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBIcon } from 'mdbreact';
 import { Badge, IconButton } from '@material-ui/core'
 import { ShoppingCart } from '@material-ui/icons'
-import { Cart } from "./Cart";
+import { CartIcon } from "./CartIcon";
 
 export const Navbar = ({ name, cart }) => {
     
@@ -46,8 +46,8 @@ export const Navbar = ({ name, cart }) => {
                 </MDBCollapse>
 
                 <MDBNavbarNav right>
-                    <MDBNavLink to="/checkout">
-                        <Cart cart={cart}/>
+                    <MDBNavLink to="/cart">
+                        <CartIcon cart={cart}/>
                     </MDBNavLink>
                 </MDBNavbarNav>
             </MDBNavbar>

@@ -1,19 +1,95 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { MDBBox, MDBCol, MDBContainer, MDBJumbotron, MDBRow } from "mdbreact";
+import { CssBaseline, Paper, Stepper, Step, StepLabel, Typography, CircularProgress, Divider, Button } from '@material-ui/core';
 import { Navbar } from "../components/Navbar";
+import { useHistory } from "react-router";
+import { commerce } from "../lib/commerce";
+import AddressForm from "../components/AddressForm";
+import PaymentForm from "../components/PaymentForm";
 
-export const Checkout = ({ cart }) => {
-    return (
-        <MDBContainer>
-            <Navbar cart={cart}/>
-            {
-                cart.line_items && cart.line_items.map((item, index) => {
-                    return (
-                        <p>{item.product_name}</p>
-                    )  
-                })
+const steps = ['Shipping address', 'Payment details'];
+
+
+export const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
+
+    const [ checkoutToken, setCheckoutToken ] = useState(null);
+    const [ activeStep, setActiveStep ] = useState(0);
+    const [ shippingData, setShippingData ] = useState({});
+    const history = useHistory();
+
+    const nextStep = () => setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    const backStep = () => setActiveStep((prevActiveStep) => prevActiveStep - 1);
+
+    useEffect(() => {
+        if (cart.id) {
+          const generateToken = async () => {
+            try {
+              const token = await commerce.checkout.generateToken(cart.id, { type: 'cart' });
+    
+              setCheckoutToken(token);
+            } catch {
+              if (activeStep !== steps.length) history.push('/');
             }
-            <p>Total: {cart.subtotal && cart.subtotal.formatted_with_symbol}</p>
-        </MDBContainer>
+          };
+    
+          generateToken();
+        }
+      }, [cart]);
+
+      const test = (data) => {
+        setShippingData(data);
+    
+        nextStep();
+      };
+    
+      let Confirmation = () => (order.customer ? (
+        <>
+          <div>
+            <Typography variant="h5">Thank you for your purchase, {order.customer.firstname} {order.customer.lastname}!</Typography>
+            <Divider/>
+            <Typography variant="subtitle2">Order ref: {order.customer_reference}</Typography>
+          </div>
+          <br />
+          <Button variant="outlined" type="button" to="/">Back to home</Button>
+        </>
+      ) : (
+        <div>
+          <CircularProgress />
+        </div>
+      ));
+    
+      if (error) {
+        Confirmation = () => (
+          <>
+            <Typography variant="h5">Error: {error}</Typography>
+            <br />
+            <Button variant="outlined" type="button" to="/">Back to home</Button>
+          </>
+        );
+      }
+    
+    const Form = () => (
+        activeStep === 0
+        ? <AddressForm checkoutToken={checkoutToken} nextStep={nextStep} setShippingData={setShippingData} test={test} />
+        : <PaymentForm checkoutToken={checkoutToken} nextStep={nextStep} backStep={backStep} shippingData={shippingData} onCaptureCheckout={onCaptureCheckout} />
+    );
+
+    return (
+        <>
+            <Navbar cart={cart}/>
+            <main>
+                <Paper>
+                <Typography variant="h4" align="center">Checkout</Typography>
+                <Stepper activeStep={activeStep}>
+                    {steps.map((label) => (
+                    <Step key={label}>
+                        <StepLabel>{label}</StepLabel>
+                    </Step>
+                    ))}
+                </Stepper>
+                {activeStep === steps.length ? <Confirmation /> : checkoutToken && <Form />}
+                </Paper>
+            </main>
+        </>   
     )
 }
