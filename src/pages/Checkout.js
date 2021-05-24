@@ -6,6 +6,8 @@ import { useHistory } from "react-router";
 import { commerce } from "../lib/commerce";
 import AddressForm from "../components/AddressForm";
 import PaymentForm from "../components/PaymentForm";
+import useStyles from '../styles/CheckoutStyle';
+
 
 const steps = ['Shipping address', 'Payment details'];
 
@@ -16,6 +18,7 @@ export const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
     const [ activeStep, setActiveStep ] = useState(0);
     const [ shippingData, setShippingData ] = useState({});
     const history = useHistory();
+    const classes = useStyles();
 
     const nextStep = () => setActiveStep((prevActiveStep) => prevActiveStep + 1);
     const backStep = () => setActiveStep((prevActiveStep) => prevActiveStep - 1);
@@ -77,18 +80,20 @@ export const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
     return (
         <>
             <Navbar cart={cart}/>
-            <main>
-                <Paper>
+            <CssBaseline />
+            <div className={classes.toolbar} />
+            <main className={classes.layout}>
+              <Paper className={classes.paper}>
                 <Typography variant="h4" align="center">Checkout</Typography>
-                <Stepper activeStep={activeStep}>
-                    {steps.map((label) => (
+                <Stepper activeStep={activeStep} className={classes.stepper}>
+                  {steps.map((label) => (
                     <Step key={label}>
-                        <StepLabel>{label}</StepLabel>
+                      <StepLabel>{label}</StepLabel>
                     </Step>
-                    ))}
+                  ))}
                 </Stepper>
                 {activeStep === steps.length ? <Confirmation /> : checkoutToken && <Form />}
-                </Paper>
+              </Paper>
             </main>
         </>   
     )
