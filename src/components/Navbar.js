@@ -1,7 +1,10 @@
 import React, { useState } from "react"
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBIcon } from 'mdbreact';
+import { Badge, IconButton } from '@material-ui/core'
+import { ShoppingCart } from '@material-ui/icons'
+import { CartIcon } from "./CartIcon";
 
-export const Navbar = ({ name }) => {
+export const Navbar = ({ name, cart }) => {
     
     const [collapse, setCollapse] = useState(false);
 
@@ -12,9 +15,6 @@ export const Navbar = ({ name }) => {
     return (
         <header>
             <MDBNavbar dark expand="md" transparent>
-                <MDBNavbarBrand href="/">
-                    <strong>Mr. Sunshine</strong>
-                </MDBNavbarBrand>
                 <MDBNavbarToggler onClick={onClick} />
                 <MDBCollapse isOpen={collapse} navbar>
                     <MDBNavbarNav left>
@@ -26,6 +26,11 @@ export const Navbar = ({ name }) => {
 
                         { name == "about" && <MDBNavItem active><MDBNavLink to="/about">About</MDBNavLink></MDBNavItem>}
                         { name != "about" && <MDBNavItem><MDBNavLink to="/about">About</MDBNavLink></MDBNavItem>}
+                    </MDBNavbarNav>
+                    <MDBNavbarNav center>
+                        <MDBNavbarBrand href="/">
+                            <strong>Mr. Sunshine</strong>
+                        </MDBNavbarBrand>
                     </MDBNavbarNav>
                     <MDBNavbarNav right className="nav-flex-icons">
                         <MDBNavItem>
@@ -39,6 +44,12 @@ export const Navbar = ({ name }) => {
                         </MDBNavItem>
                     </MDBNavbarNav>
                 </MDBCollapse>
+
+                <MDBNavbarNav right>
+                    <MDBNavLink to="/cart">
+                        <CartIcon cart={cart}/>
+                    </MDBNavLink>
+                </MDBNavbarNav>
             </MDBNavbar>
         </header>
     )
