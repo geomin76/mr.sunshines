@@ -14,10 +14,16 @@ export const About = ({ cart }) => {
                         <MDBCol md="8">
                             <MDBBox m="3">
                                 <p>
-                                    I am a person who is positive about every aspect of life. There are many things I like to do, to see, and to experience. I like to read, I like to write; I like to think, I like to dream; I like to talk, I like to listen. I like to see the sunrise in the morning, I like to see the moonlight at night; I like to feel the music flowing on my face, I like to smell the wind coming from the ocean. I like to look at the clouds in the sky with a blank mind, I like to do thought experiment when I cannot sleep in the middle of the night. I like flowers in spring, rain in summer, leaves in autumn, and snow in winter. I like to sleep early, I like to get up late; I like to be alone, I like to be surrounded by people. I like country’s peace, I like metropolis’ noise; I like the beautiful west lake in Hangzhou, I like the flat cornfield in Champaign. I like delicious food and comfortable shoes; I like good books and romantic movies. I like the land and the nature, I like people. And, I like to laugh.
+                                    My name is Emilee Hansen and I am an elementary school art teacher and a novice screen printer in the western mountains of North Carolina. Throughout my life I have always been engaged in many different types of art making. I studied commercial photography for half of my undergraduate career and was shockingly burnt out. Within that degree I was required to take a drawing class that inspired me to switch my course of study to art education. Emerged in a variety of enriching studios from book arts to ceramic throwing, fiber surface design, painting, sculpture casting, and so many more I found myself in a screen printing class.                                
                                 </p>
                                 <p>
-                                    From <a href="https://faculty.washington.edu/xpchen/me.html" target="_blank">this page</a>
+                                    I did not understand the value and my interest in the meticulous process until two years after graduating and being removed from all studio resources. Go figure. I also didn’t develop my style until the same time period when I found myself heartbroken. It sounds cheesy but it is true. I started expressing myself authentically when I needed it most. I wasn’t creating art for critiques anymore. I was creating art for my hurt heart.                                
+                                </p>
+                                <p>
+                                    With that in mind my style took a sharp turn and became dark and gloomy, and it is something that I have fallen in love with. Throughout Mr. Sunshine’s journey you’ll see twisted thoughts, words, and imagery that come from dark yet playfully exploratory places — thanks to my forever inner child and the bliss of working with youth.
+                                </p>
+                                <p>
+                                    My goal is to express myself in truthful ways that encourages others to dig deeper and question themselves and life. So cheers to this gloomy and happy adventure.
                                 </p>
                             </MDBBox>
                         </MDBCol>
