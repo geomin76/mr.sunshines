@@ -77,8 +77,6 @@ export const App = () => {
     fetchCart();
   }, []);
 
-  console.log(cart)
-
   return (
     <MuiThemeProvider theme={theme}>
       <CssBaseline />
