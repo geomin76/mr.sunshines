@@ -8,6 +8,7 @@ import { commerce } from './lib/commerce'
 import { Navbar } from "./components/Navbar";
 import { Checkout } from "./pages/Checkout";
 import { Cart } from "./pages/Cart";
+import { Item } from "./pages/Item";
 
 const theme = createMuiTheme({
   palette: {
@@ -104,6 +105,11 @@ export const App = () => {
         <Switch>
           <Route exact path="/checkout">      
             <Checkout cart={cart} order={order} onCaptureCheckout={handleCaptureCheckout} error={errorMessage}/>
+          </Route>
+        </Switch>
+        <Switch>
+          <Route exact path="/item/:id">
+            <Item cart={cart}/>
           </Route>
         </Switch>
       </Router>

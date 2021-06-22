@@ -1,8 +1,11 @@
 import React from "react"
 import { MDBBox, MDBLightbox, MDBContainer, MDBCol, MDBRow, MDBBtn } from "mdbreact";
 import { Navbar } from "../components/Navbar";
+import { useHistory } from "react-router-dom";
 
 export const Store = ({ products, addToCart, cart }) => {
+
+    const history = useHistory();
 
     return (
         <MDBContainer>
@@ -14,8 +17,10 @@ export const Store = ({ products, addToCart, cart }) => {
                             return (
                                 <MDBCol md="4" key={index}>
                                     <MDBBox alignContent="center" alignItems="center" m="3">
-                                        <div className="text-center">
-                                            <img src={product.media.source} className="img-fluid"/>
+                                        <div className="text-center" onClick={() => {
+                                            history.push('/item/' + product.id)
+                                        }}>
+                                            <img src={product.media.source} className="img-fluid" alt=""/>
                                             <h3>{product.name}</h3>
                                             <p>{product.price.formatted_with_symbol}</p>
                                         </div>
