@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { MDBBox, MDBCol, MDBContainer, MDBJumbotron, MDBRow } from "mdbreact";
+import { MDBBox, MDBCol, MDBContainer, MDBJumbotron, MDBRow, MDBNavLink, MDBBtn } from "mdbreact";
 import { CssBaseline, Paper, Stepper, Step, StepLabel, Typography, CircularProgress, Divider, Button } from '@material-ui/core';
 import { Navbar } from "../components/Navbar";
 import { useHistory } from "react-router";
@@ -53,7 +53,7 @@ export const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
             <Typography variant="subtitle2">Order ref: {order.customer_reference}</Typography>
           </div>
           <br />
-          <Button variant="outlined" type="button" to="/">Back to home</Button>
+          <MDBNavLink to="/"><MDBBtn>Back to home</MDBBtn></MDBNavLink>
         </>
       ) : (
         <div>
@@ -66,7 +66,7 @@ export const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
           <>
             <Typography variant="h5">Error: {error}</Typography>
             <br />
-            <Button variant="outlined" type="button" to="/">Back to home</Button>
+            <MDBNavLink to="/"><MDBBtn>Back to home</MDBBtn></MDBNavLink>
           </>
         );
       }
