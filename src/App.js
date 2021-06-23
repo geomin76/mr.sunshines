@@ -109,7 +109,7 @@ export const App = () => {
         </Switch>
         <Switch>
           <Route exact path="/item/:id">
-            <Item cart={cart}/>
+            <Item cart={cart} addToCart={handleAddToCart}/>
           </Route>
         </Switch>
       </Router>
