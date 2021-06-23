@@ -12,7 +12,9 @@ const AddressForm = ({ checkoutToken, test }) => {
   const [shippingSubdivision, setShippingSubdivision] = useState('');
   const [shippingOptions, setShippingOptions] = useState([]);
   const [shippingOption, setShippingOption] = useState('');
+
   const methods = useForm();
+  const { register, handleSubmit } = useForm();
 
   const fetchShippingCountries = async (checkoutTokenId) => {
     const { countries } = await commerce.services.localeListShippingCountries(checkoutTokenId);
@@ -49,29 +51,33 @@ const AddressForm = ({ checkoutToken, test }) => {
     if (shippingSubdivision) fetchShippingOptions(checkoutToken.id, shippingCountry, shippingSubdivision);
   }, [shippingSubdivision]);
 
+  const onSubmit = (input) => {
+    test({ ...input, shippingCountry, shippingSubdivision, shippingOption })
+  }
+
   return (
     <>
       <Typography variant="h6" gutterBottom>Shipping address</Typography>
       <FormProvider {...methods}>
-        <form onSubmit={methods.handleSubmit((data) => test({ ...data, shippingCountry, shippingSubdivision, shippingOption }))}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6}>
-                <input required name="firstName" placeholder="First name" type="text" className="form-control" style={{ backgroundColor: '#1A1A1D' }}/>
+                <input {...register("firstName")} required name="firstName" placeholder="First name" type="text" className="form-control" style={{ backgroundColor: '#1A1A1D' }} />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <input required name="lastName" placeholder="Last name" type="text" className="form-control" style={{ backgroundColor: '#1A1A1D' }}/>
+                <input {...register("lastName")} required name="lastName" placeholder="Last name" type="text" className="form-control" style={{ backgroundColor: '#1A1A1D' }} />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <input required name="address1" placeholder="Address line 1" type="text" className="form-control" style={{ backgroundColor: '#1A1A1D' }}/>
+                <input {...register("address1")} required name="address1" placeholder="Address line 1" type="text" className="form-control" style={{ backgroundColor: '#1A1A1D' }} />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <input required name="email" placeholder="Email" type="text" className="form-control" style={{ backgroundColor: '#1A1A1D' }}/>
+                <input {...register("email")} required name="email" placeholder="Email" type="text" className="form-control" style={{ backgroundColor: '#1A1A1D' }} />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <input required name="city" placeholder="City" type="text" className="form-control" style={{ backgroundColor: '#1A1A1D' }}/>
+                <input {...register("city")} required name="city" placeholder="City" type="text" className="form-control" style={{ backgroundColor: '#1A1A1D' }} />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <input required name="zip" placeholder="Zip / Postal Code" type="text" className="form-control" style={{ backgroundColor: '#1A1A1D' }}/>
+                <input {...register("zip")} required name="zip" placeholder="Zip / Postal Code" type="text" className="form-control" style={{ backgroundColor: '#1A1A1D' }} />
             </Grid>
             
             <Grid item xs={12} sm={6} >
@@ -94,7 +100,7 @@ const AddressForm = ({ checkoutToken, test }) => {
                 ))}
               </Select>
             </Grid>
-            {/* <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={6}>
               <InputLabel>Shipping Options</InputLabel>
               <Select value={shippingOption} fullWidth onChange={(e) => setShippingOption(e.target.value)}>
                 {shippingOptions.map((sO) => ({ id: sO.id, label: `${sO.description} - (${sO.price.formatted_with_symbol})` })).map((item) => (
@@ -103,7 +109,7 @@ const AddressForm = ({ checkoutToken, test }) => {
                   </MenuItem>
                 ))}
               </Select>
-            </Grid> */}
+            </Grid>
           </Grid>
           <br />
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
