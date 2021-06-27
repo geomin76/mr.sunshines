@@ -4,6 +4,7 @@ import { Navbar } from "../components/Navbar";
 import { useHistory } from "react-router-dom";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
 export const Store = ({ products, addToCart, cart }) => {
 
@@ -22,12 +23,15 @@ export const Store = ({ products, addToCart, cart }) => {
                                         <div className="text-center" onClick={() => {
                                             history.push('/item/' + product.id)
                                         }}>
-                                            {/* <img src={product.media.source} className="img-fluid" alt=""/> */}
                                             <LazyLoadImage effect="blur" placeholderSrc={product.media.source} src={product.media.source} alt="" className="img-fluid"/>
-                                            <h3>{product.name}</h3>
+                                        </div>
+                                        <div style={{ display: "inline-block"}}>
+                                            <h4>{product.name}</h4>
                                             <p>{product.price.formatted_with_symbol}</p>
                                         </div>
-                                        <MDBBtn onClick={() => addToCart(product.id, 1)}>Add to cart</MDBBtn>
+                                        <div style={{ display: "inline-block"}}>
+                                            <MDBBtn onClick={() => addToCart(product.id, 1)}><AddShoppingCartIcon/></MDBBtn>
+                                        </div>
                                     </MDBBox>
                                 </MDBCol>
                             )
