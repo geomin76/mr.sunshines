@@ -30,13 +30,18 @@ export const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart }) => {
                             )  
                         })
                     }
+                    { cart.line_items.length === 0 && <p>No items in the cart! <MDBNavLink to="/store">Shop now!</MDBNavLink></p>}
                     </MDBListGroup>
                 </MDBCol>
 
-                <MDBCol md="4">
-                    <p>Total: {cart.subtotal && cart.subtotal.formatted_with_symbol}</p>
-                    <MDBNavLink to="/checkout"><MDBBtn>Checkout</MDBBtn></MDBNavLink>
-                </MDBCol>
+                { cart.line_items.length !== 0 &&
+                    <>
+                    <MDBCol md="4">
+                        <p>Total: {cart.subtotal && cart.subtotal.formatted_with_symbol}</p>
+                        <MDBNavLink to="/checkout"><MDBBtn>Checkout</MDBBtn></MDBNavLink>
+                    </MDBCol>
+                    </>
+                }
             </MDBRow>
         </MDBContainer>
     )

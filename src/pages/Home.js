@@ -9,10 +9,7 @@ export const Home = ({ cart }) => {
             <MDBRow>
                 <MDBCol>
                     <MDBJumbotron style={{ background: "none" }}>
-                        <h2>Hello, world!</h2>
-                        <p>Here is a very very basic version of the website! I'm just getting some code out there!</p>
-                        <p>I'll be putting more design/shopping functionality, but I'll occasionally send you this link so you can give me feedback!!</p>
-                        <p>CHEERS</p>
+                        <h2>intro here!</h2>
                     </MDBJumbotron>
                 </MDBCol>   
             </MDBRow>

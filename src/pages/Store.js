@@ -1,5 +1,5 @@
 import React from "react"
-import { MDBBox, MDBLightbox, MDBContainer, MDBCol, MDBRow, MDBBtn } from "mdbreact";
+import { MDBBox, MDBLightbox, MDBContainer, MDBCol, MDBRow, MDBBtn, MDBTypography } from "mdbreact";
 import { Navbar } from "../components/Navbar";
 import { useHistory } from "react-router-dom";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -25,13 +25,9 @@ export const Store = ({ products, addToCart, cart }) => {
                                         }}>
                                             <LazyLoadImage effect="blur" placeholderSrc={product.media.source} src={product.media.source} alt="" className="img-fluid"/>
                                         </div>
-                                        <div style={{ display: "inline-block"}}>
-                                            <h4>{product.name}</h4>
-                                            <p>{product.price.formatted_with_symbol}</p>
-                                        </div>
-                                        <div style={{ display: "inline-block"}}>
-                                            <MDBBtn onClick={() => addToCart(product.id, 1)}><AddShoppingCartIcon/></MDBBtn>
-                                        </div>
+                                            <MDBTypography tag='h4'>{product.name}</MDBTypography>
+                                            <MDBTypography tag='h6'>{product.price.formatted_with_symbol}</MDBTypography>
+                                            <MDBBtn onClick={() => addToCart(product.id, 1)}><AddShoppingCartIcon /></MDBBtn>
                                     </MDBBox>
                                 </MDBCol>
                             )
