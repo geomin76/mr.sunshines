@@ -2,6 +2,8 @@ import React from "react"
 import { MDBBox, MDBCol, MDBContainer, MDBJumbotron, MDBRow, MDBNavLink, MDBListGroup, MDBListGroupItem, MDBBtn } from "mdbreact";
 import { Navbar } from "../components/Navbar";
 import Increment from "../components/Increment";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart }) => {
 
@@ -17,7 +19,8 @@ export const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart }) => {
                             return (
                                 <MDBListGroupItem style={{ backgroundColor: "#1A1A1D" }}>
                                     <div style={{ justifyContent: "space-between"}}>
-                                        <img style={{ display: "inline-block", padding: "5px" }} src={item.media.source} width="40%" alt="img"/>
+                                        <div style={{ display: "inline-block", padding: "5px"}}><LazyLoadImage effect="blur" placeholderSrc={item.media.source} src={item.media.source} alt="" width="40%"/></div>
+                                        {/* <img style={{ display: "inline-block", padding: "5px" }} src={item.media.source} width="40%" alt="img"/> */}
                                         <p style={{ display: "inline-block", padding: "5px", fontSize: "20px" }}>{item.product_name}</p>
                                         <div style={{ display: "inline-block", padding: "5px" }}><Increment qty={item.quantity} onUpdateCartQty={onUpdateCartQty} id={item.id}/></div>
                                         <p style={{ display: "inline-block", padding: "5px" }}>{item.line_total.formatted_with_symbol}</p>

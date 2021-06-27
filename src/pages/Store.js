@@ -2,6 +2,8 @@ import React from "react"
 import { MDBBox, MDBLightbox, MDBContainer, MDBCol, MDBRow, MDBBtn } from "mdbreact";
 import { Navbar } from "../components/Navbar";
 import { useHistory } from "react-router-dom";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export const Store = ({ products, addToCart, cart }) => {
 
@@ -20,7 +22,8 @@ export const Store = ({ products, addToCart, cart }) => {
                                         <div className="text-center" onClick={() => {
                                             history.push('/item/' + product.id)
                                         }}>
-                                            <img src={product.media.source} className="img-fluid" alt=""/>
+                                            {/* <img src={product.media.source} className="img-fluid" alt=""/> */}
+                                            <LazyLoadImage effect="blur" placeholderSrc={product.media.source} src={product.media.source} alt="" className="img-fluid"/>
                                             <h3>{product.name}</h3>
                                             <p>{product.price.formatted_with_symbol}</p>
                                         </div>

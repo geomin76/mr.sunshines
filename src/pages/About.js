@@ -1,6 +1,8 @@
 import React from "react"
 import { MDBBox, MDBCol, MDBContainer, MDBRow } from "mdbreact";
 import { Navbar } from "../components/Navbar";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export const About = ({ cart }) => {
     return (
@@ -10,7 +12,7 @@ export const About = ({ cart }) => {
                 <h2 className="text-center">About me</h2>
                 <MDBBox style={{ marginTop: "20px" }}>
                     <MDBRow>
-                        <MDBCol md="4"><div className="text-center"><img width="100%" src="https://lh3.googleusercontent.com/_3Ynyei2akRtN1Otw1sb6sFGaDI8Fph9luOCzF9wEHzjkPp3ur1nL31Qt-Uk9RkCmkr2Mtdm2Fgzaoiafope2nPsHUrX5_nYYT6oLAIFCQ69yC4mEXJ5bXLP5MwXJucy1OUHhR5b0CU=w2400" alt=""/></div></MDBCol>
+                        <MDBCol md="4"><div className="text-center"><LazyLoadImage effect="blur" placeholderSrc="https://lh3.googleusercontent.com/_3Ynyei2akRtN1Otw1sb6sFGaDI8Fph9luOCzF9wEHzjkPp3ur1nL31Qt-Uk9RkCmkr2Mtdm2Fgzaoiafope2nPsHUrX5_nYYT6oLAIFCQ69yC4mEXJ5bXLP5MwXJucy1OUHhR5b0CU=w2400" src="https://lh3.googleusercontent.com/_3Ynyei2akRtN1Otw1sb6sFGaDI8Fph9luOCzF9wEHzjkPp3ur1nL31Qt-Uk9RkCmkr2Mtdm2Fgzaoiafope2nPsHUrX5_nYYT6oLAIFCQ69yC4mEXJ5bXLP5MwXJucy1OUHhR5b0CU=w2400" alt="" width="100%"/></div></MDBCol>
                         <MDBCol md="8">
                             <MDBBox m="3">
                                 <p>
