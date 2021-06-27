@@ -37,12 +37,6 @@ export const Navbar = ({ name, cart }) => {
 
                     <MDBNavbarNav right className="nav-flex-icons">
                         <MDBNavItem>
-                            <MDBNavLink to="#"><MDBIcon fab icon="facebook-f"/></MDBNavLink>
-                        </MDBNavItem>
-                        <MDBNavItem>
-                            <MDBNavLink to="#"><MDBIcon fab icon="twitter" /></MDBNavLink>
-                        </MDBNavItem>
-                        <MDBNavItem>
                             <MDBNavLink to="#"><MDBIcon fab icon="instagram" /></MDBNavLink>
                         </MDBNavItem>
                     </MDBNavbarNav>
