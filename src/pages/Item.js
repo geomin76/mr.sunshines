@@ -11,10 +11,10 @@ export const Item = ({ cart, addToCart }) => {
     const location = useLocation();
 
     useEffect(() => {
-        commerce.products.retrieve(location.pathname.split('/')[2]).then((product) => {
+        commerce.products.retrieve(location.pathname.split('/')[2], { type: 'permalink' }).then((product) => {
             setData(product)
             console.log(product)
-        })
+        });
     }, [location.pathname])
 
     return (
@@ -24,8 +24,7 @@ export const Item = ({ cart, addToCart }) => {
             <>
                 <h1>{data.name}</h1>
                 <p>{data.description}</p>
-                {/* <img src={data.media.source} width="40%" alt=""/> */}
-                <LazyLoadImage effect="blur" placeholderSrc={data.media.source} src={data.media.source} alt="" width="40%"/>
+                <LazyLoadImage effect="blur" placeholderSrc={data.media.source} src={data.media.source} alt="" width="70%"/>
                 <p>{data.price.formatted_with_symbol}</p>
                 <MDBBtn onClick={() => addToCart(data.id, 1)}>Add to cart</MDBBtn>
             </>

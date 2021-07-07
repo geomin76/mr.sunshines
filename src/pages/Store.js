@@ -21,13 +21,13 @@ export const Store = ({ products, addToCart, cart }) => {
                                 <MDBCol md="4" key={index}>
                                     <MDBBox alignContent="center" alignItems="center" m="3">
                                         <div className="text-center" onClick={() => {
-                                            history.push('/item/' + product.id)
+                                            history.push('/item/' + product.permalink)
                                         }}>
                                             <LazyLoadImage effect="blur" placeholderSrc={product.media.source} src={product.media.source} alt="" className="img-fluid"/>
                                         </div>
                                             <MDBTypography tag='h4'>{product.name}</MDBTypography>
                                             <MDBTypography tag='h6'>{product.price.formatted_with_symbol}</MDBTypography>
-                                            <MDBBtn onClick={() => addToCart(product.id, 1)}><AddShoppingCartIcon /></MDBBtn>
+                                            {/* <MDBBtn onClick={() => addToCart(product.id, 1)}><AddShoppingCartIcon /></MDBBtn> */}
                                     </MDBBox>
                                 </MDBCol>
                             )
