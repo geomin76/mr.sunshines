@@ -37,8 +37,8 @@ export const App = () => {
     setCart(await commerce.cart.retrieve());
   }
 
-  const handleAddToCart = async (productId, quantity) => {
-    const item = await commerce.cart.add(productId, quantity);
+  const handleAddToCart = async (productId, quantity, size) => {
+    const item = await commerce.cart.add(productId, quantity, size);
 
     setCart(item.cart)
   }
