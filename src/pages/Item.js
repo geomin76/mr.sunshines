@@ -5,7 +5,7 @@ import { useHistory, useLocation } from "react-router-dom";
 import { commerce } from "../lib/commerce";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import { Box, Button, Dialog, DialogTitle } from "@material-ui/core";
+import { Box, Button } from "@material-ui/core";
 
 export const Item = ({ cart, addToCart }) => {
     const [ data, setData ] = useState({});

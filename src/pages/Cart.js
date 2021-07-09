@@ -4,6 +4,7 @@ import { Navbar } from "../components/Navbar";
 import Increment from "../components/Increment";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import { Box, Grid } from "@material-ui/core";
 
 export const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart }) => {
 
@@ -39,8 +40,11 @@ export const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart }) => {
                 { cart.line_items.length !== 0 &&
                     <>
                     <MDBCol md="4">
-                        <h2>Total: {cart.subtotal && cart.subtotal.formatted_with_symbol}</h2>
-                        <MDBNavLink to="/checkout"><MDBBtn>Checkout</MDBBtn></MDBNavLink>
+                        <Box m={3}>
+                            <h2>Total</h2>
+                            <h2>{cart.subtotal && cart.subtotal.formatted_with_symbol}</h2>
+                            <MDBNavLink to="/checkout"><MDBBtn>Checkout</MDBBtn></MDBNavLink>
+                        </Box>
                     </MDBCol>
                     </>
                 }
