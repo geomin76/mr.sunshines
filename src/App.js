@@ -9,6 +9,7 @@ import { Navbar } from "./components/Navbar";
 import { Checkout } from "./pages/Checkout";
 import { Cart } from "./pages/Cart";
 import { Item } from "./pages/Item";
+import { PageNotFound } from "./pages/404";
 
 const theme = createMuiTheme({
   palette: {
@@ -87,32 +88,51 @@ export const App = () => {
           <Route exact path="/"> 
             <Home cart={cart}/>
           </Route>
-        </Switch>
-        <Switch>
           <Route exact path="/store">
             <Store products={products} addToCart={handleAddToCart} cart={cart}/>
-          </Route>      
-        </Switch>
-        <Switch>
+          </Route>    
           <Route exact path="/about">      
             <About cart={cart}/>
           </Route>
-        </Switch>
-        <Switch>
           <Route exact path="/cart">
             <Cart cart={cart} onUpdateCartQty={handleUpdateCartQty} onRemoveFromCart={handleRemoveFromCart}/>
           </Route>
-        </Switch>
-        <Switch>
           <Route exact path="/checkout">      
             <Checkout cart={cart} order={order} onCaptureCheckout={handleCaptureCheckout} error={errorMessage}/>
           </Route>
-        </Switch>
-        <Switch>
           <Route exact path="/item/:id">
             <Item cart={cart} addToCart={handleAddToCart}/>
           </Route>
+          <Route component={PageNotFound}/>
         </Switch>
+        {/* <Switch>
+          <Route exact path="/store">
+            <Store products={products} addToCart={handleAddToCart} cart={cart}/>
+          </Route>      
+        </Switch> */}
+        {/* <Switch>
+          <Route exact path="/about">      
+            <About cart={cart}/>
+          </Route>
+        </Switch> */}
+        {/* <Switch>
+          <Route exact path="/cart">
+            <Cart cart={cart} onUpdateCartQty={handleUpdateCartQty} onRemoveFromCart={handleRemoveFromCart}/>
+          </Route>
+        </Switch> */}
+        {/* <Switch>
+          <Route exact path="/checkout">      
+            <Checkout cart={cart} order={order} onCaptureCheckout={handleCaptureCheckout} error={errorMessage}/>
+          </Route>
+        </Switch> */}
+        {/* <Switch>
+          <Route exact path="/item/:id">
+            <Item cart={cart} addToCart={handleAddToCart}/>
+          </Route>
+        </Switch> */}
+        {/* <Switch>
+          <Route component={PageNotFound}/>
+        </Switch> */}
       </Router>
     </MuiThemeProvider>
     

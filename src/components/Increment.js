@@ -1,31 +1,23 @@
-import React, { Component } from "react";
-import "./Increment.css";
+import React, { useState } from "react"
+import { Button, Box } from "@material-ui/core";
 
-class inputPage extends Component {
-  state = {
-    value: this.props.qty
-  }
+export const Increment = ({ qty, onUpdateCartQty, id }) => {
 
-  decrease = () => {
-    this.props.onUpdateCartQty(this.props.id, this.state.value - 1)
-    this.setState({ value: this.state.value - 1 });
-  }
+  const [quantity, setQuantity] = useState(qty);
 
-  increase = () => {
-    this.props.onUpdateCartQty(this.props.id, this.state.value + 1)
-    this.setState({ value: this.state.value + 1 });
-  }
-
-  render() {
-    return (
-        <div className="def-number-input number-input">
-          <button onClick={this.decrease} className="minus"></button>
-          <input className="quantity" name="quantity" value={this.state.value} onChange={()=> console.log('change')}
-          type="number" />
-          <button onClick={this.increase} className="plus"></button>
-        </div>
-      );
-  }
+  return (
+    <>
+    <Box style={{ display: 'flex'}}>
+      <Button m={1} style={{maxWidth: '40px', maxHeight: '40px', minWidth: '40px', minHeight: '40px'}} variant="outlined" onClick={() => {
+        onUpdateCartQty(id, quantity - 1);
+        setQuantity(quantity - 1);
+      }}>-</Button>
+      <Box m={1} marginLeft={2} marginRight={2}>{quantity}</Box>
+      <Button m={1} style={{maxWidth: '40px', maxHeight: '40px', minWidth: '40px', minHeight: '40px'}} variant="outlined" onClick={() => {
+        onUpdateCartQty(id, quantity + 1);
+        setQuantity(quantity + 1);
+      }}>+</Button>
+    </Box>
+    </>
+  )
 }
-
-export default inputPage;
