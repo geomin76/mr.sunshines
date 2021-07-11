@@ -1,5 +1,5 @@
 import React from "react"
-import { MDBBox, MDBCol, MDBContainer, MDBJumbotron, MDBRow, MDBNavLink, MDBListGroup, MDBListGroupItem, MDBBtn } from "mdbreact";
+import { MDBBox, MDBCol, MDBContainer, MDBJumbotron, MDBRow, MDBNavLink, MDBListGroup, MDBListGroupItem, MDBBtn, MDBTypography } from "mdbreact";
 import { Navbar } from "../components/Navbar";
 import {Increment} from "../components/Increment";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -50,11 +50,34 @@ export const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart }) => {
                 { cart.line_items.length !== 0 &&
                     <>
                     <MDBCol md="4">
+                        <Box m={3}><h2>Order Summary</h2></Box>
+                        <hr></hr>
                         <Box m={3}>
+                            <MDBTypography tag='p' className='float-left'>Subtotal</MDBTypography>
+                            <MDBTypography tag='p' className='float-right'>{cart.subtotal && cart.subtotal.formatted_with_symbol}</MDBTypography>
+                        </Box>
+                        <br></br>
+                        <Box m={3}>
+                            <MDBTypography tag='p' className='float-left'>Shipping</MDBTypography>
+                            <MDBTypography tag='p' className='float-right'>FREE</MDBTypography>
+                        </Box>
+                        <br></br>
+                        <hr></hr>
+                        <Box m={3}>
+                            <MDBTypography tag='b' className='float-left'>Total</MDBTypography>
+                            <MDBTypography tag='b' className='float-right'>{cart.subtotal && cart.subtotal.formatted_with_symbol}</MDBTypography>
+                        </Box>
+                        <br></br>
+                        <Box m={3}>
+                            <MDBBtn onClick={() => history.push("/checkout")}>
+                                Checkout
+                            </MDBBtn>
+                        </Box>
+                        {/* <Box m={3}>
                             <h2>Total</h2>
                             <h2>{cart.subtotal && cart.subtotal.formatted_with_symbol}</h2>
                             <MDBNavLink to="/checkout"><MDBBtn>Checkout</MDBBtn></MDBNavLink>
-                        </Box>
+                        </Box> */}
                     </MDBCol>
                     </>
                 }

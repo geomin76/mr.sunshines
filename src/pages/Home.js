@@ -11,7 +11,6 @@ export const Home = ({ cart }) => {
                 <MDBCol>
                     <MDBJumbotron style={{ background: "none" }}>
                         <h2>intro here!</h2>
-                        <Increment/>
                     </MDBJumbotron>
                 </MDBCol>   
             </MDBRow>
