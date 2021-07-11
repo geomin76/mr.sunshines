@@ -1,6 +1,7 @@
 import React from "react"
 import { MDBBox, MDBCol, MDBContainer, MDBJumbotron, MDBRow } from "mdbreact";
 import { Navbar } from "../components/Navbar";
+import { Increment } from "../components/Increment";
 
 export const Home = ({ cart }) => {
     return (
@@ -10,6 +11,7 @@ export const Home = ({ cart }) => {
                 <MDBCol>
                     <MDBJumbotron style={{ background: "none" }}>
                         <h2>intro here!</h2>
+                        <Increment/>
                     </MDBJumbotron>
                 </MDBCol>   
             </MDBRow>

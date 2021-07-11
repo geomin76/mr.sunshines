@@ -21,10 +21,10 @@ export const Store = ({ products, addToCart, cart }) => {
                                     <MDBCard ecommerce onClick={() => {
                                             history.push('/item/' + product.permalink)
                                     }} style={{ backgroundColor: "#1A1A1D" }}>
-                                        <MDBBox m={3}>
+                                        <MDBBox m={2}>
                                             <LazyLoadImage effect="blur" placeholderSrc={product.media.source} src={product.media.source} alt="" className="img-fluid"/>
                                         </MDBBox>
-                                        <MDBBox m={3}>
+                                        <MDBBox p={3}>
                                             <MDBTypography tag='h4' className='float-left'>{product.name}</MDBTypography>
                                             <MDBTypography tag='h5' className='float-right'>{product.price.formatted_with_symbol}</MDBTypography>
                                         </MDBBox>
