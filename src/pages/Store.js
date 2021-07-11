@@ -4,7 +4,6 @@ import { Navbar } from "../components/Navbar";
 import { useHistory } from "react-router-dom";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
 export const Store = ({ products, addToCart, cart }) => {
 
