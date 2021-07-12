@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
-import { MDBBox, MDBCol, MDBContainer, MDBJumbotron, MDBRow, MDBNavLink, MDBBtn } from "mdbreact";
-import { CssBaseline, Paper, Stepper, Step, StepLabel, Typography, CircularProgress, Divider, Button } from '@material-ui/core';
+import { MDBContainer, MDBNavLink, MDBBtn } from "mdbreact";
+import { CssBaseline, Paper, Stepper, Step, StepLabel, Typography, CircularProgress, Divider } from '@material-ui/core';
 import { Navbar } from "../components/Navbar";
 import { useHistory } from "react-router";
 import { commerce } from "../lib/commerce";
