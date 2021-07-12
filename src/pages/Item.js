@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react"
-import { MDBBox, MDBLightbox, MDBContainer, MDBCol, MDBRow, MDBBtn } from "mdbreact";
+import { MDBContainer, MDBCol, MDBRow, MDBBtn } from "mdbreact";
 import { Navbar } from "../components/Navbar";
 import { useHistory, useLocation } from "react-router-dom";
 import { commerce } from "../lib/commerce";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { Box, Button } from "@material-ui/core";
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
 export const Item = ({ cart, addToCart }) => {
     const [ data, setData ] = useState({});
@@ -44,9 +46,11 @@ export const Item = ({ cart, addToCart }) => {
                         </Box>
                     </MDBCol>
                     <MDBCol md="6">
-                        <Box m={3}>
-                            <LazyLoadImage effect="blur" placeholderSrc={data.media.source} src={data.media.source} alt="" width="100%"/>
-                        </Box>
+                        <Zoom>
+                            <Box m={3}>
+                                <LazyLoadImage effect="blur" placeholderSrc={data.media.source} src={data.media.source} alt="" width="100%"/>
+                            </Box>
+                        </Zoom>
                     </MDBCol>
                     <MDBCol md="3">
                         <Box m={3}>                            
@@ -56,7 +60,7 @@ export const Item = ({ cart, addToCart }) => {
                                 
                                 data.variant_groups[0].options && data.variant_groups[0].options.map((item, index) => {
                                     return (
-                                        <div className="p-2">
+                                        <div className="p-2" key={index}>
                                             <Button key={index} color={(size === item.id? "default": "primary")}  style={{maxWidth: '40px', maxHeight: '40px', minWidth: '40px', minHeight: '40px'}} onClick={() => 
                                             {
                                                 setSize(item.id)

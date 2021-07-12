@@ -5,7 +5,6 @@ import { Home } from "./pages/Home";
 import { Store } from "./pages/Store";
 import { About } from "./pages/About";
 import { commerce } from './lib/commerce'
-import { Navbar } from "./components/Navbar";
 import { Checkout } from "./pages/Checkout";
 import { Cart } from "./pages/Cart";
 import { Item } from "./pages/Item";

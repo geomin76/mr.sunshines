@@ -1,7 +1,5 @@
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBIcon } from 'mdbreact';
 import { Badge, IconButton } from '@material-ui/core'
 import { ShoppingCart } from '@material-ui/icons'
-import { Navbar } from "./Navbar";
 import React from "react"
 
 export const CartIcon = ({ cart }) => {

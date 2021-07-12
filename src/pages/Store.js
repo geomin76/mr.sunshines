@@ -1,5 +1,5 @@
 import React from "react"
-import { MDBBox, MDBLightbox, MDBContainer, MDBCol, MDBRow, MDBBtn, MDBTypography, MDBCard, MDBCardImage } from "mdbreact";
+import { MDBBox, MDBContainer, MDBCol, MDBRow, MDBTypography, MDBCard } from "mdbreact";
 import { Navbar } from "../components/Navbar";
 import { useHistory } from "react-router-dom";
 import { LazyLoadImage } from 'react-lazy-load-image-component';

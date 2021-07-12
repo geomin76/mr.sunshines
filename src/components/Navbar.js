@@ -1,7 +1,5 @@
 import React, { useState } from "react"
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBIcon } from 'mdbreact';
-import { Badge, IconButton } from '@material-ui/core'
-import { ShoppingCart } from '@material-ui/icons'
 import { CartIcon } from "./CartIcon";
 
 export const Navbar = ({ name, cart }) => {

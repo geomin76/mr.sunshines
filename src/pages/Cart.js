@@ -1,10 +1,10 @@
 import React from "react"
-import { MDBBox, MDBCol, MDBContainer, MDBJumbotron, MDBRow, MDBNavLink, MDBListGroup, MDBListGroupItem, MDBBtn, MDBTypography } from "mdbreact";
+import { MDBBox, MDBCol, MDBContainer, MDBRow, MDBListGroup, MDBListGroupItem, MDBBtn, MDBTypography } from "mdbreact";
 import { Navbar } from "../components/Navbar";
 import {Increment} from "../components/Increment";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import { Box, Grid } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 
 export const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart }) => {
