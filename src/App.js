@@ -13,11 +13,14 @@ import { PageNotFound } from "./pages/404";
 const theme = createMuiTheme({
   palette: {
     background: {
-      default: "#1A1A1D"
+      default: "#19181A"
     },
     text: {
       primary: "#FFFFFF"
     }
+  },
+  typography: {
+    fontFamily: "'Yomogi', cursive"
   }
 })
 

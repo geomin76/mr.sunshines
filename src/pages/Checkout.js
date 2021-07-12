@@ -53,7 +53,7 @@ export const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
             <Typography variant="subtitle2">Order ref: {order.customer_reference}</Typography>
           </div>
           <br />
-          <MDBNavLink to="/"><MDBBtn>Back to home</MDBBtn></MDBNavLink>
+          <MDBNavLink to="/"><MDBBtn color="blue-grey">Back to home</MDBBtn></MDBNavLink>
         </>
       ) : (
         <div>
@@ -66,7 +66,7 @@ export const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
           <>
             <Typography variant="h5">Error: {error}</Typography>
             <br />
-            <MDBNavLink to="/"><MDBBtn>Back to home</MDBBtn></MDBNavLink>
+            <MDBNavLink to="/"><MDBBtn color="blue-grey">Back to home</MDBBtn></MDBNavLink>
           </>
         );
       }
@@ -89,7 +89,7 @@ export const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
                   <Stepper activeStep={activeStep} className={classes.stepper}>
                     {steps.map((label) => (
                       <Step key={label}>
-                        <StepLabel>{label}</StepLabel>
+                        <StepLabel >{label}</StepLabel>
                       </Step>
                     ))}
                   </Stepper>

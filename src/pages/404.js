@@ -17,7 +17,7 @@ export const PageNotFound = ({ cart }) => {
                         <MDBCol md="12">
                             <h1>Oh no!</h1>
                             <p>Looks like this page doesn't exist...</p>
-                            <MDBBtn onClick={() => history.push("/")}>Go home!</MDBBtn>
+                            <MDBBtn color="blue-grey" onClick={() => history.push("/")}>Go home!</MDBBtn>
                         </MDBCol>
                     </MDBRow>
                 </MDBBox>

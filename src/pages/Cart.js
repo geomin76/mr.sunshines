@@ -21,7 +21,7 @@ export const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart }) => {
                     {
                         cart && cart.line_items && cart.line_items.map((item, index) => {
                             return (
-                                <MDBListGroupItem style={{ backgroundColor: "#1A1A1D" }}>
+                                <MDBListGroupItem style={{ backgroundColor: "#19181A" }}>
                                     <MDBRow>
                                         <MDBCol size="4">
                                             <LazyLoadImage effect="blur" placeholderSrc={item.media.source} src={item.media.source} alt="" width="100%"/>
@@ -43,7 +43,7 @@ export const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart }) => {
                     </MDBListGroup>
                     { cart && cart.line_items.length === 0 && <>
                         <Box m={3}><p>You have no items in your cart!</p></Box>
-                        <Box m={3}><MDBBtn onClick={() => history.push("/store")}>Shop now!</MDBBtn></Box>
+                        <Box m={3}><MDBBtn color="blue-grey" onClick={() => history.push("/store")}>Shop now!</MDBBtn></Box>
                     </>}
                 </MDBCol>
 
@@ -69,15 +69,10 @@ export const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart }) => {
                         </Box>
                         <br></br>
                         <Box m={3}>
-                            <MDBBtn onClick={() => history.push("/checkout")}>
+                            <MDBBtn color="blue-grey" onClick={() => history.push("/checkout")}>
                                 Checkout
                             </MDBBtn>
                         </Box>
-                        {/* <Box m={3}>
-                            <h2>Total</h2>
-                            <h2>{cart.subtotal && cart.subtotal.formatted_with_symbol}</h2>
-                            <MDBNavLink to="/checkout"><MDBBtn>Checkout</MDBBtn></MDBNavLink>
-                        </Box> */}
                     </MDBCol>
                     </>
                 }

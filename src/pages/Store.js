@@ -20,7 +20,7 @@ export const Store = ({ products, addToCart, cart }) => {
                                 <MDBCol md="4" key={index}>
                                     <MDBCard ecommerce onClick={() => {
                                             history.push('/item/' + product.permalink)
-                                    }} style={{ backgroundColor: "#1A1A1D" }}>
+                                    }} style={{ backgroundColor: "#19181A" }}>
                                         <MDBBox m={2}>
                                             <LazyLoadImage effect="blur" placeholderSrc={product.media.source} src={product.media.source} alt="" className="img-fluid"/>
                                         </MDBBox>

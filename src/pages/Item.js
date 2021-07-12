@@ -74,7 +74,7 @@ export const Item = ({ cart, addToCart }) => {
                             </div>
                         </Box>
                         <div className="d-flex justify-content-center">
-                            <MDBBtn onClick={() => {
+                            <MDBBtn color="blue-grey" onClick={() => {
                                 if (size === null) {
                                     setWarning(true);
                                   }
