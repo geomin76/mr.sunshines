@@ -35,7 +35,7 @@ export const Navbar = ({ name, cart }) => {
 
                     <MDBNavbarNav right className="nav-flex-icons">
                         <MDBNavItem>
-                            <MDBNavLink to="#"><MDBIcon fab icon="instagram" /></MDBNavLink>
+                            <a href="https://www.instagram.com/mr.sun.shines/" style={{color: "white"}} target="_blank" rel="noreferrer"><MDBIcon fab icon="instagram"/></a>
                         </MDBNavItem>
                     </MDBNavbarNav>
                 </MDBCollapse>
