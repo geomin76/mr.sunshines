@@ -8,6 +8,8 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import { Box, Button } from "@material-ui/core";
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 export const Item = ({ cart, addToCart }) => {
     const [ data, setData ] = useState({});
@@ -28,6 +30,8 @@ export const Item = ({ cart, addToCart }) => {
         }
     }, [size])
 
+    console.log(data)
+
     return (
         <MDBContainer>
             <Navbar name="" cart={cart}/>
@@ -46,11 +50,19 @@ export const Item = ({ cart, addToCart }) => {
                         </Box>
                     </MDBCol>
                     <MDBCol md="6">
-                        <Zoom>
-                            <Box m={3}>
-                                <LazyLoadImage effect="blur" placeholderSrc={data.media.source} src={data.media.source} alt="" width="100%"/>
-                            </Box>
-                        </Zoom>
+                        <Carousel>
+                            { data.assets.map((item) => {
+                                return (
+                                    <Box m={3}>
+                                        <Zoom>
+                                            <Box m={3}>
+                                                <LazyLoadImage effect="blur" placeholderSrc={item.url} src={item.url} alt="" width="100%"/>
+                                            </Box>
+                                        </Zoom>
+                                    </Box>
+                                )
+                            })}
+                        </Carousel>
                     </MDBCol>
                     <MDBCol md="3">
                         <Box m={3}>                            
