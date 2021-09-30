@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBIcon } from 'mdbreact';
 import { CartIcon } from "./CartIcon";
+import "../App.css";
 
 export const Navbar = ({ name, cart }) => {
     
@@ -12,7 +13,7 @@ export const Navbar = ({ name, cart }) => {
 
     return (
         <header>
-            <MDBNavbar dark expand="md" transparent>
+            <MDBNavbar dark expand="lg" transparent>
                 <MDBNavbarToggler onClick={onClick} />
                 <MDBCollapse isOpen={collapse} navbar>
                     <MDBNavbarNav left>
@@ -22,7 +23,7 @@ export const Navbar = ({ name, cart }) => {
                         </MDBNavbarBrand>
                     </MDBNavbarNav>
 
-                    <MDBNavbarNav center>
+                    <MDBNavbarNav center className="Navbar-custom">
                         { name === "home" && <MDBNavItem><MDBNavLink to="/"><u>HOME</u></MDBNavLink></MDBNavItem>}
                         { name !== "home" && <MDBNavItem><MDBNavLink to="/">HOME</MDBNavLink></MDBNavItem>}
 
