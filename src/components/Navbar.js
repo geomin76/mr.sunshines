@@ -16,21 +16,24 @@ export const Navbar = ({ name, cart }) => {
                 <MDBNavbarToggler onClick={onClick} />
                 <MDBCollapse isOpen={collapse} navbar>
                     <MDBNavbarNav left>
-                        { name === "home" && <MDBNavItem active><MDBNavLink to="/">Home</MDBNavLink></MDBNavItem>}
-                        { name !== "home" && <MDBNavItem><MDBNavLink to="/">Home</MDBNavLink></MDBNavItem>}
-
-                        { name === "store" && <MDBNavItem active><MDBNavLink to="/store">Store</MDBNavLink></MDBNavItem>}
-                        { name !== "store" && <MDBNavItem><MDBNavLink to="/store">Store</MDBNavLink></MDBNavItem>}
-
-                        { name === "about" && <MDBNavItem active><MDBNavLink to="/about">About</MDBNavLink></MDBNavItem>}
-                        { name !== "about" && <MDBNavItem><MDBNavLink to="/about">About</MDBNavLink></MDBNavItem>}
+                        <MDBNavbarBrand href="/">
+                            <strong>Mr. Sunshine's</strong>
+                            {/* <img alt="" src="https://lh3.googleusercontent.com/hPkDMCfGFjpMpKznRaWWDTH09lFo5i4pdUSKrgUaTIeANt5L1jJv3TziMeGQyxCQ49K7lq9r4ClN1gD3SjrkUM756oKq90mpvQaVf78Wj0htRyy_6kkSeYzKFkvzSGlA3-04xtj8sqs=w2400"/> */}
+                        </MDBNavbarBrand>
                     </MDBNavbarNav>
 
                     <MDBNavbarNav center>
-                        <MDBNavbarBrand href="/">
-                            <strong>Mr. Sunshine</strong>
-                            {/* <img alt="" src="https://lh3.googleusercontent.com/hPkDMCfGFjpMpKznRaWWDTH09lFo5i4pdUSKrgUaTIeANt5L1jJv3TziMeGQyxCQ49K7lq9r4ClN1gD3SjrkUM756oKq90mpvQaVf78Wj0htRyy_6kkSeYzKFkvzSGlA3-04xtj8sqs=w2400"/> */}
-                        </MDBNavbarBrand>
+                        { name === "home" && <MDBNavItem><MDBNavLink to="/"><u>HOME</u></MDBNavLink></MDBNavItem>}
+                        { name !== "home" && <MDBNavItem><MDBNavLink to="/">HOME</MDBNavLink></MDBNavItem>}
+
+                        { name === "store" && <MDBNavItem><MDBNavLink to="/store"><u>STORE</u></MDBNavLink></MDBNavItem>}
+                        { name !== "store" && <MDBNavItem><MDBNavLink to="/store">STORE</MDBNavLink></MDBNavItem>}
+
+                        { name === "about" && <MDBNavItem><MDBNavLink to="/about"><u>ABOUT</u></MDBNavLink></MDBNavItem>}
+                        { name !== "about" && <MDBNavItem><MDBNavLink to="/about">ABOUT</MDBNavLink></MDBNavItem>}
+
+                        { name === "contact" && <MDBNavItem><MDBNavLink to="/contact"><u>CONTACT</u></MDBNavLink></MDBNavItem>}
+                        { name !== "contact" && <MDBNavItem><MDBNavLink to="/contact">CONTACT</MDBNavLink></MDBNavItem>}
                     </MDBNavbarNav>
 
                     <MDBNavbarNav right className="nav-flex-icons">

@@ -62,22 +62,22 @@ const AddressForm = ({ checkoutToken, test }) => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6}>
-                <input {...register("firstName")} required name="firstName" placeholder="First name" type="text" className="form-control" style={{ backgroundColor: '#19181A' }} />
+                <input {...register("firstName")} required name="firstName" placeholder="First name" type="text" className="form-control" style={{ backgroundColor: '#000000' }} />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <input {...register("lastName")} required name="lastName" placeholder="Last name" type="text" className="form-control" style={{ backgroundColor: '#19181A' }} />
+                <input {...register("lastName")} required name="lastName" placeholder="Last name" type="text" className="form-control" style={{ backgroundColor: '#000000' }} />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <input {...register("address1")} required name="address1" placeholder="Address line 1" type="text" className="form-control" style={{ backgroundColor: '#19181A' }} />
+                <input {...register("address1")} required name="address1" placeholder="Address line 1" type="text" className="form-control" style={{ backgroundColor: '#000000' }} />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <input {...register("email")} required name="email" placeholder="Email" type="text" className="form-control" style={{ backgroundColor: '#19181A' }} />
+                <input {...register("email")} required name="email" placeholder="Email" type="text" className="form-control" style={{ backgroundColor: '#000000' }} />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <input {...register("city")} required name="city" placeholder="City" type="text" className="form-control" style={{ backgroundColor: '#19181A' }} />
+                <input {...register("city")} required name="city" placeholder="City" type="text" className="form-control" style={{ backgroundColor: '#000000' }} />
             </Grid>
             <Grid item xs={12} sm={6}>
-                <input {...register("zip")} required name="zip" placeholder="Zip / Postal Code" type="text" className="form-control" style={{ backgroundColor: '#19181A' }} />
+                <input {...register("zip")} required name="zip" placeholder="Zip / Postal Code" type="text" className="form-control" style={{ backgroundColor: '#000000' }} />
             </Grid>
             
             <Grid item xs={12} sm={6} >

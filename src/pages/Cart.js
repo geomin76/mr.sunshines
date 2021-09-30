@@ -21,7 +21,7 @@ export const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart }) => {
                     {
                         cart && cart.line_items && cart.line_items.map((item, index) => {
                             return (
-                                <MDBListGroupItem style={{ backgroundColor: "#19181A" }}>
+                                <MDBListGroupItem style={{ backgroundColor: "#000000" }}>
                                     <MDBRow>
                                         <MDBCol size="4">
                                             <LazyLoadImage effect="blur" placeholderSrc={item.media.source} src={item.media.source} alt="" width="100%"/>
