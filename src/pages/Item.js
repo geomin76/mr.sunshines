@@ -48,6 +48,10 @@ export const Item = ({ cart, addToCart }) => {
                         <Box m={3}>
                             <p>{data.description}</p>
                         </Box>
+                        <Box m={3}>
+                            { data.inventory.available === 0 && <h4 className="text-center" style={{color:"red"}}>OUT OF STOCK</h4>}
+                            { data.inventory.available <= 3 && data.inventory.available !== 0 && <p className="text-center" style={{color:"red"}}>Low inventory</p>}
+                        </Box>
                     </MDBCol>
                     <MDBCol md="6">
                         <Carousel>
@@ -86,7 +90,7 @@ export const Item = ({ cart, addToCart }) => {
                             </div>
                         </Box>
                         <div className="d-flex justify-content-center">
-                            <MDBBtn color="blue-grey" onClick={() => {
+                            <MDBBtn color="blue-grey" disabled={data.inventory.available === 0} onClick={() => {
                                 if (size === null) {
                                     setWarning(true);
                                   }

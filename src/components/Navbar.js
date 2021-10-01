@@ -19,7 +19,7 @@ export const Navbar = ({ name, cart }) => {
                     <MDBNavbarNav left>
                         <MDBNavbarBrand href="/">
                             <strong>Mr. Sunshine's</strong>
-                            {/* <img alt="" src="https://lh3.googleusercontent.com/hPkDMCfGFjpMpKznRaWWDTH09lFo5i4pdUSKrgUaTIeANt5L1jJv3TziMeGQyxCQ49K7lq9r4ClN1gD3SjrkUM756oKq90mpvQaVf78Wj0htRyy_6kkSeYzKFkvzSGlA3-04xtj8sqs=w2400"/> */}
+                            {/* <img alt="" width="20%" src="https://lh3.googleusercontent.com/hPkDMCfGFjpMpKznRaWWDTH09lFo5i4pdUSKrgUaTIeANt5L1jJv3TziMeGQyxCQ49K7lq9r4ClN1gD3SjrkUM756oKq90mpvQaVf78Wj0htRyy_6kkSeYzKFkvzSGlA3-04xtj8sqs=w2400"/> */}
                         </MDBNavbarBrand>
                     </MDBNavbarNav>
 
