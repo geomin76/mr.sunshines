@@ -9,10 +9,9 @@ export const About = ({ cart }) => {
         <MDBContainer>
             <Navbar name="about" cart={cart} />
             <MDBBox style={{ marginTop: "20px" }}>
-                <h2 className="text-center">About me</h2>
                 <MDBBox style={{ marginTop: "20px" }}>
                     <MDBRow>
-                        <MDBCol md="4"><div className="text-center"><LazyLoadImage effect="blur" placeholderSrc="https://lh3.googleusercontent.com/_3Ynyei2akRtN1Otw1sb6sFGaDI8Fph9luOCzF9wEHzjkPp3ur1nL31Qt-Uk9RkCmkr2Mtdm2Fgzaoiafope2nPsHUrX5_nYYT6oLAIFCQ69yC4mEXJ5bXLP5MwXJucy1OUHhR5b0CU=w2400" src="https://lh3.googleusercontent.com/_3Ynyei2akRtN1Otw1sb6sFGaDI8Fph9luOCzF9wEHzjkPp3ur1nL31Qt-Uk9RkCmkr2Mtdm2Fgzaoiafope2nPsHUrX5_nYYT6oLAIFCQ69yC4mEXJ5bXLP5MwXJucy1OUHhR5b0CU=w2400" alt="" width="100%" /></div></MDBCol>
+                        <MDBCol md="4"><div className="text-center"><LazyLoadImage effect="blur" placeholderSrc="https://mrsunshines.s3.amazonaws.com/me.jpg" src="https://mrsunshines.s3.amazonaws.com/me.jpg" alt="" width="100%" /></div></MDBCol>
                         <MDBCol md="8">
                             <MDBBox m="3">
                                 <p>
