@@ -72,6 +72,7 @@ export const App = () => {
       setOrder(incomingOrder);
 
       refreshCart();
+      fetchProducts();
     } catch (error) {
       console.log(error)
       setErrorMessage(error.data.error.message);

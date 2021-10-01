@@ -13,11 +13,12 @@ export const Home = ({ cart }) => {
         <MDBContainer>
             <Navbar name="home" cart={cart}/>
             <MDBRow>
-                <MDBCol md="8">
-                    <div className="text-center"><LazyLoadImage effect="blur" placeholderSrc="https://mrsunshines.s3.amazonaws.com/home.JPG" src="https://mrsunshines.s3.amazonaws.com/home.JPG" alt="" width="90%" /></div>
+                <MDBCol md="8" className="d-flex align-items-center justify-content-center text-center">
+                    <div><LazyLoadImage effect="blur" placeholderSrc="https://mrsunshines.s3.amazonaws.com/home.JPG" src="https://mrsunshines.s3.amazonaws.com/home.JPG" alt="" width="90%" /></div>
                 </MDBCol> 
-                <MDBCol md="4">
-                    <div className="text-center">
+                <MDBCol md="4" className="d-flex align-items-center justify-content-center text-center">
+                    <div>
+                        <p>You only see what you want to see.</p>
                         <MDBBtn color="white" onClick={() => history.push("/store")}><div color="black">Shop now</div></MDBBtn>
                     </div>
                 </MDBCol>
