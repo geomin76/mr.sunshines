@@ -11,6 +11,8 @@ export const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart }) => {
 
     const history = useHistory();
 
+    console.log(cart);
+
     return (
         <MDBContainer>
             <Navbar cart={cart}/>

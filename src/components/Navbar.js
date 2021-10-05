@@ -18,8 +18,7 @@ export const Navbar = ({ name, cart }) => {
                 <MDBCollapse isOpen={collapse} navbar>
                     <MDBNavbarNav left>
                         <MDBNavbarBrand href="/">
-                            <strong>Mr. Sunshine's</strong>
-                            {/* <img alt="" width="20%" src="https://lh3.googleusercontent.com/hPkDMCfGFjpMpKznRaWWDTH09lFo5i4pdUSKrgUaTIeANt5L1jJv3TziMeGQyxCQ49K7lq9r4ClN1gD3SjrkUM756oKq90mpvQaVf78Wj0htRyy_6kkSeYzKFkvzSGlA3-04xtj8sqs=w2400"/> */}
+                            <img alt="" height="55" src="https://lh3.googleusercontent.com/hPkDMCfGFjpMpKznRaWWDTH09lFo5i4pdUSKrgUaTIeANt5L1jJv3TziMeGQyxCQ49K7lq9r4ClN1gD3SjrkUM756oKq90mpvQaVf78Wj0htRyy_6kkSeYzKFkvzSGlA3-04xtj8sqs=w2400"/>
                         </MDBNavbarBrand>
                     </MDBNavbarNav>
 
