@@ -15,19 +15,16 @@ export const About = ({ cart }) => {
                         <MDBCol md="8">
                             <MDBBox m="3">
                                 <p>
-                                    Emilee Hansen is an elementary school art teacher and novice screen printer in the western mountains of North Carolina. She originally studied commercial photography, yet to her surprise was shockingly burnt out. While enrolled in a drawing course she was quickly inspired to become an art teacher — which is how she initially made her way into her first screen printing studio.
+                                My name is Emilee Hansen and I am an elementary school art teacher and novice screen printer in the mountains of Western North Carolina. I originally chose to study commercial photography, yet to my surprise I was shockingly burnt out. While enrolled in a drawing course I was quickly inspired to become an art teacher — which is how I initially made my way into my first screen printing studio.
                                 </p>
                                 <p>
-                                    The artist did not understand her interest in the printing process until she was removed from all studio resources two years later. Go figure. She also didn’t begin to develop her own style until the same time period when she found herself with a melancholy heart.
+                                I did not truly understand my interest in the printing process until I was removed from all studio resources two years later. Go figure. I also didn’t begin to develop my own style until the same time period when I found myself with a melancholy heart. I wasn’t creating art for critiques anymore. I was creating art for my hurt heart. 
                                 </p>
                                 <p>
-                                    With that in mind her work took a sharp turn and became dark and gloomy, and it is something that she has fallen in love with. Throughout Mr. Sunshine’s journey you’ll see twisted thoughts, words, and imagery that come from dark yet playfully exploratory places — thanks to Emilee’s forever inner child and her bliss of working with the youth.
+                                With that in mind my work took a sharp turn and became dark and gloomy, and it is something that I have fallen in love with. Throughout Mr. Sunshine’s journey you’ll see twisted thoughts, words, and imagery that come from dark yet playfully exploratory places — thanks to my forever inner child and the bliss of working with youth.
                                 </p>
                                 <p>
-                                    Mr. Sunshine’s priority is quality service through attention to detail and craftsmanship. All designs are created and silkscreen printed by the artist on comfortable garments with eco friendly inks. Like life itself, Mr. Sunshine’s is constantly evolving. Each series is limited and will come and go with new concepts and designs.
-                                </p>
-                                <p>
-                                    The goal is for creative artistry to be expressed in truthful ways that encourages others to dig deeper and question themselves and life. So cheers to this peculiar adventure.
+                                The goal is to express myself in truthful ways that encourages others to dig deeper and question themselves and life. So cheers to this gloomy, happy, and peculiar adventure.
                                 </p>
                             </MDBBox>
                         </MDBCol>
