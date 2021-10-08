@@ -1,5 +1,5 @@
 import React from "react"
-import { MDBBox, MDBCol, MDBContainer, MDBRow } from "mdbreact";
+import { MDBBox, MDBCol, MDBContainer, MDBRow, MDBBtn } from "mdbreact";
 import { Navbar } from "../components/Navbar";
 
 export const Contact = ({ cart }) => {
@@ -11,9 +11,19 @@ export const Contact = ({ cart }) => {
                     <MDBRow>
                         <MDBCol md="12">
                             <p className="text-center">
-                                For general inquires, contact <a href = "mailto: mr.sunshine.store@gmail.com" target="_blank" rel="noreferrer">mr.sunshine.store@gmail.com</a> or use the contact form below.
+                                For general inquires, contact mr.sunshine.store@gmail.com 
+                            </p>
+                            <p className="text-center">
+                                Press the button below to email!
                             </p>
                         </MDBCol>
+                        <MDBCol md="12" className="d-flex align-items-center justify-content-center text-center">
+                            <div>
+                                <a href = "mailto: mr.sunshine.store@gmail.com" target="_blank" rel="noreferrer"><MDBBtn color="white"><div color="black">Email!</div></MDBBtn></a>
+                            </div>
+                        </MDBCol>
+                    </MDBRow>
+                    <MDBRow>
                     </MDBRow>
                 </MDBBox>
             </MDBBox>
