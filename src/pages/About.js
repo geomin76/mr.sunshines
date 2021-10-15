@@ -24,6 +24,9 @@ export const About = ({ cart }) => {
                                 With that in mind my work took a sharp turn and became dark and gloomy, and it is something that I have fallen in love with. Throughout Mr. Sunshine’s journey you’ll see twisted thoughts, words, and imagery that come from dark yet playfully exploratory places — thanks to my forever inner child and the bliss of working with youth.
                                 </p>
                                 <p>
+                                Mr. Sunshine’s priority is quality service through attention to fine detail and craftsmanship. All designs are created and silkscreen printed on comfortable garments using eco-friendly inks. Like life itself, Mr. Sunshine’s is constantly evolving. Each series is limited and will come and go with new concepts and designs. 
+                                </p>
+                                <p>
                                 The goal is to express myself in truthful ways that encourages others to dig deeper and question themselves and life. So cheers to this gloomy, happy, and peculiar adventure.
                                 </p>
                             </MDBBox>
