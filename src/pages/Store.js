@@ -25,10 +25,6 @@ export const Store = ({ products, addToCart, cart }) => {
                                         <MDBBox m={2}>
                                             <LazyLoadImage effect="blur" placeholderSrc={product.media.source} src={product.media.source} alt="" className="img-fluid"/>
                                         </MDBBox>
-                                        <MDBBox p={3}>
-                                            <MDBTypography tag='h4' className='float-left'>{product.name}</MDBTypography>
-                                            <MDBTypography tag='h5' className='float-right'>{product.price.formatted_with_symbol}</MDBTypography>
-                                        </MDBBox>
                                     </MDBCard>
                                     { product.inventory.available === 0 && <h4 className="text-center" style={{color:"red"}}>OUT OF STOCK</h4>}
                                     { product.inventory.available <= 3 && product.inventory.available !== 0 && <p className="text-center" style={{color:"red"}}>Low inventory</p>}
