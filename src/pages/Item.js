@@ -77,7 +77,7 @@ export const Item = ({ cart, addToCart }) => {
                                 data.variant_groups[0].options && data.variant_groups[0].options.map((item, index) => {
                                     return (
                                         <div className="p-2" key={index}>
-                                            <Button key={index} color={(size === item.id? "default": "primary")}  style={{maxWidth: '40px', maxHeight: '40px', minWidth: '40px', minHeight: '40px'}} onClick={() => 
+                                            <Button key={index} color="white"  style={{textDecoration: size === item.id ? "underline" : "none", maxWidth: '40px', maxHeight: '40px', minWidth: '40px', minHeight: '40px'}} onClick={() => 
                                             {
                                                 setSize(item.id)
                                             }}>
@@ -90,12 +90,14 @@ export const Item = ({ cart, addToCart }) => {
                             </div>
                         </Box>
                         <div className="d-flex justify-content-center">
-                            <MDBBtn color="blue-grey" disabled={data.inventory.available === 0} onClick={() => {
+                            <MDBBtn color="white" disabled={data.inventory.available === 0} onClick={() => {
                                 if (size === null) {
                                     setWarning(true);
                                   }
                                 else {
-                                    addToCart(data.id, 1, {'vgrp_4OANwRA0klvYL8': size })
+                                    const variant_data = {}
+                                    variant_data[data.variant_groups[0].id] = size
+                                    addToCart(data.id, 1, variant_data)
                                     setSize(null);
                                     history.push('/cart')
                                 }
