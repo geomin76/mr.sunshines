@@ -69,7 +69,7 @@ export const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart }) => {
                         </Box>
                         <br></br>
                         <Box m={3}>
-                            <MDBBtn color="blue-grey" onClick={() => history.push("/checkout")}>
+                            <MDBBtn color="white" onClick={() => history.push("/checkout")}>
                                 Checkout
                             </MDBBtn>
                         </Box>
