@@ -43,8 +43,8 @@ export const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart }) => {
                     }
                     </MDBListGroup>
                     { cart && cart.line_items && cart.line_items.length === 0 && <>
-                        <Box m={3}><p>You have no items in your cart!</p></Box>
-                        <Box m={3}><MDBBtn color="white" onClick={() => history.push("/store")}>Shop now!</MDBBtn></Box>
+                        <Box m={3}><p>You have no items in your cart</p></Box>
+                        <Box m={3}><MDBBtn color="white" onClick={() => history.push("/store")}>Shop now</MDBBtn></Box>
                     </>}
                 </MDBCol>
 

@@ -11,15 +11,12 @@ export const Contact = ({ cart }) => {
                     <MDBRow>
                         <MDBCol md="12">
                             <p className="text-center">
-                                For general inquires, contact mr.sunshine.store@gmail.com 
-                            </p>
-                            <p className="text-center">
-                                Press the button below to email!
+                                For general inquires, contact mr.sunshines.store@gmail.com 
                             </p>
                         </MDBCol>
                         <MDBCol md="12" className="d-flex align-items-center justify-content-center text-center">
                             <div>
-                                <a href = "mailto: mr.sunshine.store@gmail.com" target="_blank" rel="noreferrer"><MDBBtn color="white"><div color="black">Email!</div></MDBBtn></a>
+                                <a href = "mailto: mr.sunshines.store@gmail.com" target="_blank" rel="noreferrer"><MDBBtn color="white"><div color="black">Email</div></MDBBtn></a>
                             </div>
                         </MDBCol>
                     </MDBRow>
