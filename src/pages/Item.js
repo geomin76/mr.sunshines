@@ -46,15 +46,12 @@ export const Item = ({ cart, addToCart }) => {
                             <h5>{data.price.formatted_with_symbol}</h5>
                         </Box>
                         <Box m={3}>
-                            <p>{data.description}</p>
-                        </Box>
-                        <Box m={3}>
                             { data.inventory.available === 0 && <h4 className="text-center" style={{color:"red"}}>OUT OF STOCK</h4>}
                             { data.inventory.available <= 3 && data.inventory.available !== 0 && <p className="text-center" style={{color:"red"}}>Low inventory</p>}
                         </Box>
                     </MDBCol>
                     <MDBCol md="6">
-                        <Carousel>
+                        <Carousel showStatus={false} showArrows={false}>
                             { data.assets.map((item) => {
                                 return (
                                     <Box m={3}>
