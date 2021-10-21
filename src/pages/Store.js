@@ -23,7 +23,7 @@ export const Store = ({ products, addToCart, cart }) => {
                                             history.push('/item/' + product.permalink)
                                     }} style={{ backgroundColor: "#000000", opacity: product.inventory.available === 0 ? "0.5" : '1' }}>
                                         <MDBBox m={2}>
-                                            <LazyLoadImage effect="blur" placeholderSrc={product.media.source} src={product.media.source} alt="" className="img-fluid"/>
+                                            <LazyLoadImage effect="blur" placeholderSrc={product.image.url} src={product.image.url} alt="" className="img-fluid"/>
                                         </MDBBox>
                                     </MDBCard>
                                     { product.inventory.available === 0 && <h4 className="text-center" style={{color:"red"}}>OUT OF STOCK</h4>}

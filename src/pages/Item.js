@@ -35,7 +35,7 @@ export const Item = ({ cart, addToCart }) => {
     return (
         <MDBContainer>
             <Navbar name="" cart={cart}/>
-            { data && data.media && data.price &&
+            { data && data.price &&
             <>
                 <MDBRow>
                     <MDBCol md="3">
