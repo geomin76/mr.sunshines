@@ -70,7 +70,6 @@ export const Item = ({ cart, addToCart }) => {
                             { warning && <div className="d-flex flex-row justify-content-center"><p style={{color:"red"}}>Please select a size</p></div> }
                             <div className="d-flex flex-row justify-content-center">
                             {
-                                
                                 data.variant_groups[0].options && data.variant_groups[0].options.map((item, index) => {
                                     return (
                                         <div className="p-2" key={index}>

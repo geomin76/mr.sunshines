@@ -81,7 +81,7 @@ const AddressForm = ({ checkoutToken, test }) => {
             </Grid>
             
             <Grid item xs={12} sm={6} >
-              <InputLabel style={{ color: "#FFFFFF" }}>Shipping Country</InputLabel>
+              <InputLabel style={{ color: "#FFFFFF" }}>Select your shipping country</InputLabel>
               <Select value={shippingCountry} fullWidth onChange={(e) => setShippingCountry(e.target.value)}>
                 {Object.entries(shippingCountries).map(([code, name]) => ({ id: code, label: name })).map((item) => (
                   <MenuItem key={item.id} value={item.id} style={{ color: "#000000" }}>
@@ -91,7 +91,7 @@ const AddressForm = ({ checkoutToken, test }) => {
               </Select>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <InputLabel style={{ color: "#FFFFFF" }}>Shipping State</InputLabel>
+              <InputLabel style={{ color: "#FFFFFF" }}>Select your shipping state</InputLabel>
               <Select value={shippingSubdivision} fullWidth onChange={(e) => setShippingSubdivision(e.target.value)}>
                 {Object.entries(shippingSubdivisions).map(([code, name]) => ({ id: code, label: name })).map((item) => (
                   <MenuItem key={item.id} value={item.id} style={{ color: "#000000" }}>
@@ -101,7 +101,7 @@ const AddressForm = ({ checkoutToken, test }) => {
               </Select>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <InputLabel style={{ color: "#FFFFFF" }}>Shipping Options</InputLabel>
+              <InputLabel style={{ color: "#FFFFFF" }}>Select your shipping options</InputLabel>
               <Select value={shippingOption} fullWidth onChange={(e) => setShippingOption(e.target.value)}>
                 {shippingOptions.map((sO) => ({ id: sO.id, label: `${sO.description} - (${sO.price.formatted_with_symbol})` })).map((item) => (
                   <MenuItem key={item.id} value={item.id} style={{ color: "#000000" }}>
