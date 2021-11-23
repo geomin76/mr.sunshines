@@ -10,6 +10,7 @@ import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import ReactHtmlParser from 'react-html-parser'; 
 
 export const Item = ({ cart, addToCart }) => {
     const [ data, setData ] = useState({});
@@ -44,6 +45,10 @@ export const Item = ({ cart, addToCart }) => {
                         </Box>
                         <Box m={3}>
                             <h5>{data.price.formatted_with_symbol}</h5>
+                        </Box>
+                        <Box m={3}>
+                            { ReactHtmlParser(data.description) }
+                            {/* <p>{data.description}</p> */}
                         </Box>
                         <Box m={3}>
                             { data.inventory.available === 0 && <h4 className="text-center" style={{color:"red"}}>OUT OF STOCK</h4>}

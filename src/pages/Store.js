@@ -13,7 +13,6 @@ export const Store = ({ products, addToCart, cart }) => {
         <MDBContainer>
             <Navbar name="store" cart={cart}/>
             <MDBBox style={{ marginTop: "20px" }}>
-                <p className="text-center">Here is my very first series — XL only, due to COVID supply and demand. Reluctant to release because of my nit-picky perfectionism, I am challenging myself to be okay with the things that I am not fond of. I will let you know now that some imagery may not be centered and ink may have smudged or ran through my screen incorrectly, but I guess that is the beauty of art being made by hand. If you are unhappy with your purchase please let me know and I will fix it. I am forever learning, and I am excited for my next series to be even better. Thank you for supporting this obscure adventure — it means everything. </p>
                 <MDBRow>
                     {
                         products.map((product, index) => {
